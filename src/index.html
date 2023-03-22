@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>wxvpkg Reader</title>
+</head>
+
+<body>
+	<input id="input" type="file"> Or drop the file on the page
+	<script type="module">
+		import main from "./main.js";
+
+		/** @type {HTMLInputElement} */
+		const input = document.getElementById("input");
+
+		document.addEventListener("dragover", event => void event.preventDefault());
+
+		document.addEventListener("drop", event => {
+			event.preventDefault();
+			main(event.dataTransfer.files);
+		});
+
+		input.addEventListener("change", function () {
+			main(this.files);
+		});
+	</script>
+</body>
+
+</html>
