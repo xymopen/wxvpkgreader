@@ -1,0 +1,31 @@
+{
+	"private": true,
+	"name": "wxvpkgreader",
+	"version": "1.0.0",
+	"description": "Extract Weixin Miniprogram wxvpkg",
+	"main": "index.html",
+	"scripts": {
+		"dev": "vite src",
+		"build": "vite build src",
+		"lint": "eslint && tsc --noEmit",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"wxvpkg"
+	],
+	"author": {
+		"name": "Xu Yiming",
+		"email": "xuyiming.open@outlook.com"
+	},
+	"repository": "https://github.com/xymopen/wxvpkgreader",
+	"license": "BSD-3-Clause",
+	"devDependencies": {
+		"@html-eslint/eslint-plugin": "^0.17.2",
+		"@html-eslint/parser": "^0.17.1",
+		"eslint": "^8.36.0",
+		"eslint-gitignore": "^0.1.0",
+		"eslint-plugin-html": "^7.1.0",
+		"typescript": "^5.0.2",
+		"vite": "^4.2.1"
+	}
+}
