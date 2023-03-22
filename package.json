@@ -19,6 +19,9 @@
 	},
 	"repository": "https://github.com/xymopen/wxvpkgreader",
 	"license": "BSD-3-Clause",
+	"dependencies": {
+		"jszip": "^3.10.1"
+	},
 	"devDependencies": {
 		"@html-eslint/eslint-plugin": "^0.17.2",
 		"@html-eslint/parser": "^0.17.1",
