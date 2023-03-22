@@ -99,5 +99,21 @@
 		/* Completeness */
 		// "skipDefaultLibCheck": true,
 		"skipLibCheck": true
-	}
+	},
+	"exclude": [
+		"logs",
+		"pids",
+		"lib-cov",
+		"coverage",
+		".nyc_output",
+		"build/Release",
+		"node_modules/",
+		".npm",
+		".eslintcache",
+		".vite",
+		"dist",
+		".yarn/cache",
+		".yarn/unplugged",
+		".pnp.*"
+	],
 }
