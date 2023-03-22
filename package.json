@@ -5,8 +5,8 @@
 	"description": "Extract Weixin Miniprogram wxvpkg",
 	"main": "index.html",
 	"scripts": {
-		"dev": "vite src",
-		"build": "vite build src",
+		"dev": "vite",
+		"build": "vite build",
 		"lint": "eslint && tsc --noEmit",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
