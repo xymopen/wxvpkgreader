@@ -35,6 +35,6 @@
 		"eslint-gitignore": "^0.1.0",
 		"eslint-plugin-html": "^7.1.0",
 		"typescript": "^5.0.2",
-		"vite": "^4.2.1"
+		"vite": "^4.2.3"
 	}
 }
