@@ -19,10 +19,10 @@
 	},
 	"repository": "https://github.com/xymopen/wxvpkgreader",
 	"license": "BSD-3-Clause",
-	"packageManager": "pnpm@8.4.0",
+	"packageManager": "pnpm@8.6.11",
 	"engines": {
 		"node": "^18.x",
-		"pnpm": "8.4.0"
+		"pnpm": "8.6.11"
 	},
 	"dependencies": {
 		"jszip": "^3.10.1"
