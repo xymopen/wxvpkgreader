@@ -19,10 +19,10 @@
 	},
 	"repository": "https://github.com/xymopen/wxvpkgreader",
 	"license": "BSD-3-Clause",
-	"packageManager": "pnpm@8.6.11",
+	"packageManager": "pnpm@8.14.0",
 	"engines": {
-		"node": "^18.x",
-		"pnpm": "8.6.11"
+		"node": "^20.x",
+		"pnpm": "8.14.0"
 	},
 	"dependencies": {
 		"jszip": "^3.10.1"
@@ -30,11 +30,11 @@
 	"devDependencies": {
 		"@html-eslint/eslint-plugin": "^0.17.2",
 		"@html-eslint/parser": "^0.17.1",
-		"@types/node": "^18.17.2",
-		"eslint": "^8.46.0",
+		"@types/node": "^20.10.8",
+		"eslint": "^8.56.0",
 		"eslint-gitignore": "^0.1.0",
 		"eslint-plugin-html": "^7.1.0",
-		"typescript": "^5.1.6",
-		"vite": "^4.4.8"
+		"typescript": "^5.3.3",
+		"vite": "^5.0.11"
 	}
 }
