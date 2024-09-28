@@ -1,9 +1,9 @@
-const js = require('@eslint/js')
-const globals = require('globals')
-const html = require("@html-eslint/eslint-plugin")
+import js from '@eslint/js'
+import globals from 'globals'
+import html from "@html-eslint/eslint-plugin"
 
 /** @type {import('eslint').Linter.Config[]} */
-module.exports = [
+export default [
 	{ ignores: ['dist'] },
 	{
 		...js.configs.recommended,
@@ -59,7 +59,7 @@ module.exports = [
 		languageOptions: {
 			ecmaVersion: 2022,
 			sourceType: 'module',
-			globals: globals.node,
+			globals: globals.nodeBuiltin,
 			parserOptions: {
 				ecmaVersion: 'latest',
 			}
