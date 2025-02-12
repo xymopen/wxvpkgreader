@@ -28,13 +28,13 @@
 		"jszip": "^3.10.1"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.11.1",
+		"@eslint/js": "^9.19.0",
 		"@html-eslint/eslint-plugin": "^0.27.0",
 		"@html-eslint/parser": "^0.27.0",
-		"@types/node": "ts5.3",
-		"eslint": "^9.11.1",
-		"globals": "^15.9.0",
-		"typescript": "~5.5.3",
-		"vite": "^5.4.8"
+		"@types/node": "ts5.7",
+		"eslint": "^9.19.0",
+		"globals": "^15.14.0",
+		"typescript": "~5.7.2",
+		"vite": "^6.0.11"
 	}
 }

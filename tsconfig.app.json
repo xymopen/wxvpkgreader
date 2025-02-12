@@ -8,7 +8,7 @@
 		/* Enable constraints that allow a TypeScript project to be used with project references. */
 		"composite": true,
 		/* Specify the path to .tsbuildinfo incremental compilation file. */
-		// "tsBuildInfoFile": "./.tsbuildinfo",
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 		/* Disable preferring source files instead of declaration files when referencing composite projects. */
 		// "disableSourceOfProjectReferenceRedirect": true,
 		/* Opt a project out of multi-project reference checking when editing. */
@@ -71,12 +71,16 @@
 		// "moduleSuffixes": [],
 		/* Allow imports to include TypeScript file extensions. Requires '--moduleResolution bundler' and either '--noEmit' or '--emitDeclarationOnly' to be set. */
 		"allowImportingTsExtensions": true,
+		/* Rewrite '.ts', '.tsx', '.mts', and '.cts' file extensions in relative import paths to their JavaScript equivalent in output files. */
+		// "rewriteRelativeImportExtensions": true,
 		/* Use the package.json 'exports' field when resolving package imports. */
 		// "resolvePackageJsonExports": true,
 		/* Use the package.json 'imports' field when resolving imports. */
 		// "resolvePackageJsonImports": true,
 		/* Conditions to set in addition to the resolver-specific defaults when resolving imports. */
 		// "customConditions": [],
+		/* Check side effect imports. */
+		"noUncheckedSideEffectImports": true,
 		/* Enable importing .json files. */
 		// "resolveJsonModule": true,
 		/* Enable importing files with any extension, provided a declaration file is present. */
@@ -103,14 +107,14 @@
 		// "sourceMap": true,
 		/* Include sourcemap files inside the emitted JavaScript. */
 		// "inlineSourceMap": true,
+		/* Disable emitting files from a compilation. */
+		"noEmit": true,
 		/* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
 		// "outFile": "./",
 		/* Specify an output folder for all emitted files. */
 		// "outDir": "./",
 		/* Disable emitting comments. */
 		// "removeComments": true,
-		/* Disable emitting files from a compilation. */
-		"noEmit": true,
 		/* Allow importing helper functions from tslib once per project, instead of including them per-file. */
 		// "importHelpers": true,
 		/* Emit more compliant, but verbose and less performant JavaScript for iteration. */
@@ -165,6 +169,8 @@
 		// "strictBindCallApply": true,
 		/* Check for class properties that are declared but not set in the constructor. */
 		// "strictPropertyInitialization": true,
+		/* Built-in iterators are instantiated with a 'TReturn' type of 'undefined' instead of 'any'. */
+		// "strictBuiltinIteratorReturn": true,
 		/* Enable error reporting when 'this' is given the type 'any'. */
 		// "noImplicitThis": true,
 		/* Default catch clause variables as 'unknown' instead of 'any'. */
