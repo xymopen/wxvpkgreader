@@ -1,12 +1,14 @@
 import js from '@eslint/js'
+import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
 import html from "@html-eslint/eslint-plugin"
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-	{ ignores: ['dist'] },
+export default defineConfig([
+	globalIgnores(['dist']),
 	{
-		...js.configs.recommended,
+		extends: [
+			js.configs.recommended
+		],
 		files: ['src/*.js'],
 		languageOptions: {
 			ecmaVersion: 2020,
@@ -17,7 +19,6 @@ export default [
 			}
 		},
 		rules: {
-			...js.configs.recommended.rules,
 			indent: [
 				"error",
 				"tab"
@@ -38,10 +39,11 @@ export default [
 		}
 	},
 	{
-		...html.configs["flat/recommended"],
+		extends: [
+			html.configs["flat/recommended"]
+		],
 		files: ['src/*.html'],
 		rules: {
-			...html.configs["flat/recommended"].rules,
 			"@html-eslint/require-lang": "off",
 			"@html-eslint/indent": [
 				"error",
@@ -54,7 +56,9 @@ export default [
 		}
 	},
 	{
-		...js.configs.recommended,
+		extends: [
+			js.configs.recommended
+		],
 		files: ['vite.config.js'],
 		languageOptions: {
 			ecmaVersion: 2022,
@@ -65,7 +69,6 @@ export default [
 			}
 		},
 		rules: {
-			...js.configs.recommended.rules,
 			indent: [
 				"error",
 				"tab"
@@ -84,4 +87,4 @@ export default [
 			]
 		}
 	}
-]
+])
