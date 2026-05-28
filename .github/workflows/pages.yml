@@ -14,47 +14,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
+          cache: ''
           node-version-file: "package.json"
+          package-manager-cache: false
 
       - name: Use pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
-          run_install: false
+          run_install: true
+          cache: true
 
       - name: Setup Pages
         id: pages-config
-        uses: actions/configure-pages@v5
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - name: Setup pnpm cache
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
+        uses: actions/configure-pages@v6
 
       - name: Build
         env:
           VITE_BASE_URL: ${{ steps.pages-config.outputs.base_url }}
         run: |
-          pnpm run build
+          node --run=build
 
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist/
 
@@ -74,4 +60,4 @@ jobs:
     steps:
       - name: Deploy GitHub Pages site
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
